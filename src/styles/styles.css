@@ -1,0 +1,60 @@
+body {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.timer {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: blue;
+}
+
+
+.timer__time {
+	font-size: 10rem;
+	font-weight: bold;
+	color: #fff;
+	text-shadow: 0 0 10px #000;
+}
+
+.timer__controls {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 50%;
+	height: 10%;
+}
+
+.timer__controls-reset {
+	width: 30%;
+	height: 60%;
+	background-color: #fff;
+	border: 1px solid #000;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.timer__controls-start {
+	width: 30%;
+	height: 60%;
+	background-color: #fff;
+	border: 1px solid #000;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.timer__controls-stop {
+	width: 30%;
+	height: 60%;
+	background-color: #fff;
+	border: 1px solid #000;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+
