@@ -1,0 +1,219 @@
+.barra {
+	font-family: Arial, Helvetica, sans-serif;
+
+	width:10%;
+	height: 9%;
+
+	position: fixed;
+
+	transition: 0.4s all;
+
+	z-index: 1;
+
+}
+
+.barra img {
+	padding-top: 30px;
+	padding-left: 10px;
+	transition: .3s all;
+}
+
+.barra h2 {
+	padding-top: 30px;
+	padding-left: 10px;
+	text-align: center;
+	font-size: 0px;
+	color: white;
+	transition: .3s all;
+}
+
+.selector {
+	margin-top: 50px;
+	padding: 0px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.selector__minutes {
+	text-align: center;
+	transition: .3s all;
+	
+}
+
+.selector__minutes-title {
+	padding: 0px;
+	display: block;
+	margin: 0 auto;
+	border: 0px solid #000;
+	text-align: center;
+	font-size: 0px;
+	font-weight: bold;
+	color: #fff;
+	background-color: black;
+	transition: .3s all;
+}
+
+.selector__minutes label {
+	padding: 0px;
+	font-size: 0px;
+	font-weight: bold;
+	color: #fff;
+	text-shadow: 0px 0px 2px #000;
+	transition: .3s all;
+}
+
+.selector__minutes button {
+	padding: 0px;
+	width: 0%;
+	height: 0px;
+	border: none;
+	border-radius: 0;
+	font-size: 0px;
+	transition: .3s all;
+}
+
+.selector__minutes-input {
+	padding: 0;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	width: 0%;
+	height: 0px;
+	border: none;
+	font-size: 0px;
+	border-radius: 0;
+	transition: .3s all;
+}
+
+.selector__minutes-input::-webkit-inner-spin-button,
+.selector__minutes-input::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.selector__confirm {
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.349);
+	width: 0%;
+	border: 0px solid #fff;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	transition: .3s all;
+}
+
+.selector__confirm-button {
+	padding: 0;
+	width: 0;
+	height: 00px;
+	border: none;
+	border-radius: 0px;
+	background-color: #fff;
+	color: #000;
+	font-size: 0px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.barra:hover {
+	width: 40%;
+	height: 100%;
+
+	background-color: rgba(5,33,55,0.98);
+}
+
+.barra:hover h2{
+	font-size: 40px;
+}
+
+.barra:hover .selector__minutes {
+	background-color: rgba(0, 0, 0, 0.349);
+	width: 80%;
+	border: 1px solid #fff;
+}
+
+.barra:hover .selector__minutes-title {
+	padding: 5px;
+	border: 1px solid #000;
+	text-align: center;
+	font-size: 15px;
+	font-weight: bold;
+	color: #fff;
+	background-color: black;
+}
+
+.barra:hover .selector__minutes label {
+	padding: 5px;
+	font-size: 0.9em;
+}
+
+.barra:hover .selector__minutes button {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-inline: 5px;
+	width: 5%;
+	height: 20px;
+	border: none;
+	border-radius: 25%;
+	background-color: #fff;
+	color: #000;
+	font-size: 12px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.barra:hover .selector__minutes-input {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	width: 5%;
+	height: 18px;
+	border: none;
+	text-align: center;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000;
+	background-color: #fff;
+	border-radius: 5%;
+}
+
+.barra:hover .selector__confirm {
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.349);
+	width: 50%;
+	border: 1px solid #fff;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-top: 0;
+}
+
+.barra:hover .selector__confirm-button {
+	width: 50%;
+	height: 20px;
+	border: none;
+	border-radius: 5px;
+	background-color: #fff;
+	color: #000;
+	font-size: 12px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.barra:hover img {
+	height: 0px;
+}
+
+@media (max-width: 640px) {
+	.barra:hover {
+		width: 65%;
+		height: 100%;
+	}
+
+	.barra:hover .selector__minutes-input {
+		width: 10%;
+	}
+
+	.barra:hover .selector__minutes button {
+		width: 10%;
+	}
+}

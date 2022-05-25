@@ -10,6 +10,8 @@ let buttonStart = document.getElementById("button-start");
 let buttonReset = document.getElementById("button-reset");
 let setMinutesInput = document.getElementById("minutes-input");
 let setSecondsInput = document.getElementById("seconds-input");
+let setMinutesRestInput = document.getElementById("minutes-rest-input");
+let setSecondsRestInput = document.getElementById("seconds-rest-input");
 
 buttonStart.disabled = true;
 
@@ -79,7 +81,7 @@ function setMinutes(minutes) {
 	newValue = parseInt(setMinutesInput.value) + minutes;
 
 	if (newValue < 0) {
-		setMinutes.value = 0;
+		setMinutesInput.value = 0;
 	} else {
 		setMinutesInput.value = newValue;
 	}
@@ -99,5 +101,35 @@ function setSeconds(seconds) {
 
 function setSession() {
 	startingMinutes = parseInt(setMinutesInput.value) + parseInt(setSecondsInput.value) / 60;
+	rest = false;
 	buttonReset.click();
 }
+
+function setRestMinutes(minutes) {
+	newValue = parseInt(setMinutesRestInput.value) + minutes;
+
+	if (newValue < 0) {
+		setMinutesRestInput.value = 0;
+	} else {
+		setMinutesRestInput.value = newValue;
+	}
+}
+
+function setRestSeconds(seconds) {
+	newValue = parseInt(setSecondsRestInput.value) + seconds;
+
+	if (newValue < 0) {
+		setSecondsRestInput.value = 55;
+	} else if (newValue > 59) {
+		setSecondsRestInput.value = 0;
+	} else {
+		setSecondsRestInput.value = newValue;
+	}
+}
+
+function setRestSession() {
+	startingMinutesRest = parseInt(setMinutesRestInput.value) + parseInt(setSecondsRestInput.value) / 60;
+	rest = true;
+	buttonReset.click();
+}
+

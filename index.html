@@ -6,36 +6,72 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./src/styles/styles.css">
+	<link rel="stylesheet" href="./src/styles/barra.css">
 	<title>TIMER</title>
 </head>
 
 <body>
-	<div class="selector">
-		<div class="selector__minutes">
-			<label for="minutes-input">Minutes: &nbsp;</label>
-			<button onclick="setMinutes(-1)">-</button>
-			<input id="minutes-input" disabled value="0" type="number">
-			<button onclick="setMinutes(+1)">+</button>
+
+	<div class="barra">
+		<h2>Menu<img src="./src/assets/ico/menu.png" alt="icono Menu"></h2>
+		<!-- ENTRENAMIENTO -->
+
+		<div class="selector">
+			<div class="selector__minutes">
+				<h3 class="selector__minutes-title">Entrenamiento</h3>
+			</div>
+			<div class="selector__minutes">
+				<label for="minutes-input">&nbsp;&nbsp;&nbsp;Minutos: &nbsp;</label>
+				<button onclick="setMinutes(-1)">-</button>
+				<input id="minutes-input" disabled class="selector__minutes-input" value="0" type="number">
+				<button onclick="setMinutes(+1)">+</button>
+			</div>
+			<div class="selector__minutes">
+				<label for="seconds-input">Segundos: &nbsp;</label>
+				<button onclick="setSeconds(-5)">-</button>
+				<input disabled id="seconds-input" class="selector__minutes-input" value="0" type="number">
+				<button onclick="setSeconds(+5)">+</button>
+			</div>
+			<div class="selector__confirm">
+				<button class="selector__confirm-button" onclick="setSession()">Change</button>
+			</div>
 		</div>
-		<div class="selector__seconds">
-			<label for="seconds-input">Seconds: &nbsp;</label>
-			<button onclick="setSeconds(-5)">-</button>
-			<input disabled id="seconds-input" value="0" type="number">
-			<button onclick="setSeconds(+5)">+</button>
+
+		<!-- DESCANSO -->
+
+		<div class="selector">
+			<div class="selector__minutes">
+				<h3 class="selector__minutes-title">Descanso</h3>
+			</div>
+			<div class="selector__minutes">
+				<label for="minutes-rest-input">&nbsp;&nbsp;&nbsp;Minutos: &nbsp;</label>
+				<button onclick="setRestMinutes(-1)">-</button>
+				<input id="minutes-rest-input" disabled class="selector__minutes-input" value="0" type="number">
+				<button onclick="setRestMinutes(+1)">+</button>
+			</div>
+			<div class="selector__minutes">
+				<label for="seconds-rest-input">Segundos: &nbsp;</label>
+				<button onclick="setRestSeconds(-5)">-</button>
+				<input disabled id="seconds-rest-input" class="selector__minutes-input" value="0" type="number">
+				<button onclick="setRestSeconds(+5)">+</button>
+			</div>
+			<div class="selector__confirm">
+				<button class="selector__confirm-button" onclick="setRestSession()">Change</button>
+			</div>
 		</div>
-		<div class="selector__confirm">
-			<button onclick="setSession()">Change</button>
 	</div>
+	<div class="container">
 
-	<div class="timer">
+		<div class="timer">
 
-		<div class="timer__time">
-			<span class="timer__time-hours" id="countdown"></span>
-		</div>
-		<div class="timer__controls">
-			<button class="timer__controls-start" id="button-start">Start</button>
-			<button class="timer__controls-stop" id="button-pause">Stop</button>
-			<button class="timer__controls-reset" id="button-reset">Reset</button>
+			<div class="timer__time">
+				<span class="timer__time-hours" id="countdown"></span>
+			</div>
+			<div class="timer__controls">
+				<button class="timer__controls-start" id="button-start">&#x23F5; &nbsp; Start</button>
+				<button class="timer__controls-stop" id="button-pause">&#x23F9; &nbsp;Stop</button>
+				<button class="timer__controls-reset" id="button-reset">&#x1F504; &nbsp;Reset</button>
+			</div>
 		</div>
 	</div>
 	<audio id="timeout_audio"></audio>
