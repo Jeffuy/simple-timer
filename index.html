@@ -10,18 +10,36 @@
 </head>
 
 <body>
+	<div class="selector">
+		<div class="selector__minutes">
+			<label for="minutes-input">Minutes: &nbsp;</label>
+			<button onclick="setMinutes(-1)">-</button>
+			<input id="minutes-input" disabled value="0" type="number">
+			<button onclick="setMinutes(+1)">+</button>
+		</div>
+		<div class="selector__seconds">
+			<label for="seconds-input">Seconds: &nbsp;</label>
+			<button onclick="setSeconds(-5)">-</button>
+			<input disabled id="seconds-input" value="0" type="number">
+			<button onclick="setSeconds(+5)">+</button>
+		</div>
+		<div class="selector__confirm">
+			<button onclick="setSession()">Change</button>
+	</div>
+
 	<div class="timer">
+
 		<div class="timer__time">
 			<span class="timer__time-hours" id="countdown"></span>
 		</div>
 		<div class="timer__controls">
-			<button class="timer__controls-start">Start</button>
-			<button class="timer__controls-stop">Stop</button>
-			<button class="timer__controls-reset">Reset</button>
+			<button class="timer__controls-start" id="button-start">Start</button>
+			<button class="timer__controls-stop" id="button-pause">Stop</button>
+			<button class="timer__controls-reset" id="button-reset">Reset</button>
 		</div>
 	</div>
 	<audio id="timeout_audio"></audio>
-<script src="./src/scripts/index.js"></script>
+	<script src="./src/scripts/index.js"></script>
 </body>
 
 </html>
