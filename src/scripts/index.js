@@ -63,7 +63,7 @@ function updateCountdown() {
 		background.style.backgroundColor = "blue";
 		isFirstRound = false;
 		const minutes = Math.floor(time / 60);
-		let seconds = time % 60;
+		let seconds = Math.floor(time % 60);
 
 		seconds = seconds < 10 ? "0" + seconds : seconds;
 
@@ -72,7 +72,7 @@ function updateCountdown() {
 	} else {
 		background.style.backgroundColor = "rgb(243, 194, 151)";
 		const minutes = Math.floor(restTime / 60);
-		let seconds = restTime % 60;
+		let seconds = Math.floor(restTime % 60);
 
 		seconds = seconds < 10 ? "0" + seconds : seconds;
 
@@ -122,7 +122,7 @@ function setSeconds(seconds) {
 }
 
 function setSession() {
-	startingMinutes = parseInt(setMinutesInput.value) + parseInt(setSecondsInput.value) / 60;
+	startingMinutes = parseInt(setMinutesInput.value) + (parseInt(setSecondsInput.value) / 60);
 	rest = false;
 	buttonReset.click();
 }
@@ -150,7 +150,7 @@ function setRestSeconds(seconds) {
 }
 
 function setRestSession() {
-	startingMinutesRest = parseInt(setMinutesRestInput.value) + parseInt(setSecondsRestInput.value) / 60;
+	startingMinutesRest = parseInt(setMinutesRestInput.value) + (parseInt(setSecondsRestInput.value) / 60);
 	rest = true;
 	isFirstRound = true;
 	buttonReset.click();

@@ -89,6 +89,11 @@
 	margin: 0;
 }
 
+.selector__minutes-input::-webkit-scrollbar {
+	display: none;
+}
+
+
 .selector__confirm {
 	text-align: center;
 	background-color: rgba(0, 0, 0, 0.349);
