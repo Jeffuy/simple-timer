@@ -59,21 +59,42 @@
 				<button class="selector__confirm-button" onclick="setRestSession()">Change</button>
 			</div>
 		</div>
-	</div>
-	<div class="container">
 
-		<div class="timer">
 
-			<div class="timer__time">
-				<span class="timer__time-hours" id="countdown"></span>
+		<!-- ROUNDS -->
+		<div class="selector">
+			<div class="selector__minutes">
+				<h3 class="selector__minutes-title">Rounds</h3>
 			</div>
-			<div class="timer__controls">
-				<button class="timer__controls-start" id="button-start">&#x23F5; &nbsp; Start</button>
-				<button class="timer__controls-stop" id="button-pause">&#x23F9; &nbsp;Stop</button>
-				<button class="timer__controls-reset" id="button-reset">&#x1F504; &nbsp;Reset</button>
+			<div class="selector__minutes">
+				<label for="round-input">&nbsp;&nbsp;&nbsp;Rounds: &nbsp;</label>
+				<button onclick="setRounds(-1)">-</button>
+				<input id="round-input" disabled class="selector__minutes-input" value="0" type="number">
+				<button onclick="setRounds(+1)">+</button>
+			</div>
+			<div class="selector__confirm">
+				<button class="selector__confirm-button" onclick="setSessionRounds()">Change</button>
 			</div>
 		</div>
 	</div>
+
+	<div class="timer">
+
+		<div class="timer__time">
+			<span class="timer__time-hours" id="countdown"></span>
+		</div>
+		<div class="timer__controls">
+			<button class="timer__controls-start" id="button-start">&#x23F5; &nbsp; Start</button>
+			<button class="timer__controls-stop" id="button-pause">&#x23F9; &nbsp;Stop</button>
+			<button class="timer__controls-reset" id="button-reset">&#x1F504; &nbsp;Reset</button>
+		</div>
+		<div class="timer__rounds">
+			<span class="timer__rounds-number" id="rounds">Round 1 of 5</span>
+			<button class="timer__rounds-reset" id="rounds-restart">&#x1F504; Restart </button>
+		</div>
+	</div>
+
+
 	<audio id="timeout_audio"></audio>
 	<script src="./src/scripts/index.js"></script>
 </body>
